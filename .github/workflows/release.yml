@@ -39,8 +39,8 @@ jobs:
 
       - name: Set Git User Identity
         run: |
-          git config --local user.email "test-user@users.noreply.github.com"
-          git config --local user.name "Test User" 
+          git config --local user.email "agjharms@users.noreply.github.com"
+          git config --local user.name "Alexander Harms" 
 
       - name: Fetch Latest Tag and Increment Version
         id: tagging
