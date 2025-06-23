@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "test-package"
+name = "testpackage"
 version = "0.1.0"
 description = "A test package using Hatch for package management"
 readme = "README.md"
