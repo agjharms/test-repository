@@ -76,5 +76,5 @@ jobs:
             --title "chore: update changelog for $LATEST_TAG" \
             --body "This PR updates the changelog for release $LATEST_TAG." \
             --base main \
-            --draft \ 
+            --draft \
             --head "$CHANGELOG_BRANCH"
