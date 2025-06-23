@@ -8,6 +8,8 @@ name: Run tests for Python
 on:
   push:
   pull_request:
+    types: [ready_for_review] # This is added so the checks run when the draft PR with the updated Changelog goes to review
+
 
 jobs:
   test:

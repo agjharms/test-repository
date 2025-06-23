@@ -25,8 +25,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --local user.email "agjharms@users.noreply.github.com"
-          git config --local user.name "Alexander Harms"
+          git config --local user.email "Health-RI-admin@users.noreply.github.com"
+          git config --local user.name "Health-RI Admin" 
           git pull
           
           CHANGELOG_FILE="CHANGELOG.md"
@@ -76,4 +76,5 @@ jobs:
             --title "chore: update changelog for $LATEST_TAG" \
             --body "This PR updates the changelog for release $LATEST_TAG." \
             --base main \
+            --draft \ 
             --head "$CHANGELOG_BRANCH"
