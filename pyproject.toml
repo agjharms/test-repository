@@ -45,17 +45,19 @@ path = "src/test_package/__init__.py"
 [tool.hatch.build.targets.wheel]
 packages = ["src/test_package"]
 
-[tool.hatch.envs.default]
+[tool.hatch.envs.test]
 dependencies = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",
 ]
 
-[tool.hatch.envs.default.scripts]
+[tool.hatch.envs.test.scripts]
 test = "pytest {args:tests}"
 test-cov = "pytest --cov=test_package {args:tests}"
 lint = "flake8 src tests"
 format = "black src tests && isort src tests"
+cov-report = ["- coverage combine", "coverage report", "coverage xml"]
+cov = ["test-cov", "cov-report"]
 
 [tool.hatch.envs.lint]
 dependencies = [
